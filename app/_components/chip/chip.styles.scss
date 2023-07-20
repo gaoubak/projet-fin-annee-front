@@ -1,0 +1,85 @@
+@import "@scss/variables.scss";
+
+.chipButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 8px 16px;
+  max-width: 170px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: $white;
+  &.beBlack {
+    color: $black;
+  }
+}
+
+.chipButton:hover {
+  outline: 1px solid $white;
+}
+
+.chipIcon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.chipText {
+  font-size: 14px;
+  font-weight: 600;  
+}
+
+.chipTextSelected {
+  font-size: 14px;
+  font-weight: 600;
+}
+.chipNotSelected {
+  background-color: transparent;
+}
+
+.primary-chip {
+  color: $primary;
+  &.chipSelected {
+    background: $primary-transparent;
+    color: $primary;
+  }
+}
+.secondary-chip {
+  color: $secondary;
+  &.chipSelected {
+    background: $secondary-transparent;
+    color: $secondary;
+  }
+}
+.success-chip {
+  color: $success;
+  &.chipSelected {
+    background: $success-transparent;
+    color: $success;
+  }
+}
+.alert-chip {
+  color: $alert;
+  &.chipSelected {
+    background: $alert-transparent;
+    color: $alert;
+  }
+}
+.warning-chip {
+  color: $white;
+  background: $warning;
+  &.chipSelected {
+    background: $warning-transparent;
+    color: $warning;
+  }
+}
+.info-chip {
+  color: $info;
+  &.chipSelected {
+    background: $info-transparent;
+    color: $info;
+  }
+}

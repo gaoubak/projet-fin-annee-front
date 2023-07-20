@@ -1,0 +1,148 @@
+@import "@scss/variables.scss";
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  .input_label {
+    text-transform: uppercase;
+    color: $secondary;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 4px 0;
+  }
+  .input_field {
+    border: none;
+    background: $grey;
+    padding: 12px 16px;
+    border-radius: 8px;
+    &::placeholder {
+      color: $secondary;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $primary;
+    }
+  }
+  .toggle_password_button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .select_dropdown {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 48px;
+    border-radius: 8px 0 0 8px;
+    background: $white;
+    .select_dropdown_item {
+      color: $secondary;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 8px 16px;
+      &:hover {
+        background: $grey;
+      }
+    }
+  }
+}
+
+.tel_input {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  position: relative;
+  .input_label {
+    text-transform: uppercase;
+    color: $secondary;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 4px 0;
+  }
+
+  .tel_dropdown {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 48px;
+    border-radius: 8px 0 0 8px;
+    background: $white;
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .input_field {
+    border: none;
+    background: $grey;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-left: 48px;
+    &::placeholder {
+      color: $secondary;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+.profile_pic_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  .input_label {
+    text-transform: uppercase;
+    color: $secondary;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 4px 0;
+  }
+  .input_field {
+    border: none;
+    background: $grey;
+    padding: 12px 16px;
+    border-radius: 8px;
+    &::placeholder {
+      color: $secondary;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.error-message {
+  color: $warning;
+  font-size: 12px;
+  margin: 4px 0;
+}

@@ -1,0 +1,62 @@
+@import "@scss/variables.scss";
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  &.expanded {
+    width: 100%;
+  }
+  &.collapsed {
+    width: 7rem;
+  }
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      margin-bottom: 1rem;
+    }
+  }
+  .bottom-btn {
+    margin-top: auto;
+  }
+  .toggle-nav-btn {
+    position: absolute;
+    top: calc(50% - 2rem);
+    right: 0;
+    z-index: 100;
+    width: 2rem;
+    height: 4rem;
+    background: $white;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  .chip-chargement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .icon-chip {
+    height: 15px;
+    width: 15px;
+    border-radius: 40px;
+    background-color: $white;
+  }
+
+  .content-chip {
+    width: 100px;
+    height: 6px;
+    background-color: $white;
+    margin-left: 15px;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,55 @@
+@import "@scss/variables.scss";
+
+.backgroundScrollInfo {
+  background-color: $white;
+  height: 380px;
+  width: 240px;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.scrollableInfo {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.containerScrollInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list li {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.list li button {
+  padding: 12px;
+  border-radius: 100px;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.list li button:hover {
+  background-color: $grey;
+  color: $primary;
+}
+
+.scrollableInfo::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+
+/* Pouce de la barre de défilement */
+.scrollableInfo::-webkit-scrollbar-thumb {
+  background-color: $primary; /* Couleur du pouce de la barre de défilement */
+  border-radius: 5px; /* Bord arrondi du pouce de la barre de défilement */
+}
+.scrollableInfo::-webkit-scrollbar-track {
+  background-color: $grey; /* Couleur de la piste de la barre de défilement */
+}

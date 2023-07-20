@@ -1,0 +1,79 @@
+@import "@scss/variables.scss";
+@import "@scss/mixins.scss";
+
+.user-chip__profile-picture {
+  border-radius: 100%;
+  outline: $primary solid 2px;
+  outline-offset: 3px;
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+}
+
+.topProfile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profilePage_container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.profilePage_name {
+  font-size: 22px;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+.profilePage_email {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: $primary;
+}
+.profilePage_id {
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.buttonEditProfil {
+  padding: 10px 20px 10px 20px;
+  background-color: transparent;
+  border-radius: 80px;
+  border: 2px solid $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconEditProfil {
+  font-size: 20px;
+  margin-right: 0.3rem;
+}
+
+.textEditProfil {
+  font-size: 15px;
+}
+
+.buttonEditProfil:hover {
+  transition: 0.3s;
+  background-color: $primary;
+  .iconEditProfil {
+    color: $white;
+  }
+  .textEditProfil {
+    color: $white;
+  }
+}
+
+.contentProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}

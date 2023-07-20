@@ -1,0 +1,100 @@
+@import "@scss/variables.scss";
+
+.chipDropdown {
+  .chipButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 8px 16px;
+    width: 170px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+
+  .chipButton:hover {
+    outline: 1px solid $white;
+  }
+
+  .chipIcon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .chipText {
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+  }
+
+  .chipTextSelected {
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+  }
+
+  .chipSelected {
+    background-color: $white;
+  }
+  .chipNotSelected {
+    background-color: transparent;
+  }
+
+  .primary-chip {
+    color: $primary;
+    &.chipSelected {
+      background: $primary-transparent;
+      color: $primary;
+    }
+  }
+  .secondary-chip {
+    color: $secondary;
+    &.chipSelected {
+      background: $secondary-transparent;
+      color: $secondary;
+    }
+  }
+  .success-chip {
+    color: $success;
+    &.chipSelected {
+      background: $success-transparent;
+      color: $success;
+    }
+  }
+  .alert-chip {
+    color: $alert;
+    &.chipSelected {
+      background: $alert-transparent;
+      color: $alert;
+    }
+  }
+  .warning-chip {
+    color: $warning;
+    &.chipSelected {
+      background: $warning-transparent;
+      color: $warning;
+    }
+  }
+  .info-chip {
+    color: $info;
+    &.chipSelected {
+      background: $info-transparent;
+      color: $info;
+    }
+  }
+  .chipDropdownContent {
+    display: flex;
+    flex-direction: column;
+    border-left: $primary solid 5px;
+    padding-left: 1rem;
+    & > a {
+      margin-top: 0.5rem;
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}

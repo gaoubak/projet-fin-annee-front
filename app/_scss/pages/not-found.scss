@@ -1,0 +1,28 @@
+@import "@scss/variables.scss";
+#not-found {
+  background: $secondary;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  & > h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0;
+  }
+  & > span {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+    & > a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

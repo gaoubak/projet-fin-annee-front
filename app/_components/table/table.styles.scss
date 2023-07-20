@@ -1,0 +1,110 @@
+@import "@scss/variables.scss";
+
+$table-bg: rgba(243, 242, 249, 1);
+$table-hover: rgba(0, 0, 0, 0.05);
+$active-color: rgba(172, 55, 181, 1);
+$inactive-border: rgba(172, 55, 181, 1);
+$arrow-bg: rgba(172, 55, 181, 0.2);
+$search-bar-bg: rgb(255, 255, 255);
+$font-size: 1rem;
+$table-bg: rgba(243, 242, 249, 1);
+$font-size: 1rem;
+$search-bar-bg: white;
+$inactive-border: rgba(172, 55, 181, 0.2);
+$active-color: rgba(172, 55, 181, 1);
+$table-hover: rgba(0, 0, 0, 0.05);
+$delete-color: rgba(255, 51, 63, 1);
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $font-size;
+
+  thead {
+    background-color: $table-bg;
+
+    .header {
+      cursor: pointer;
+
+      svg {
+        color: $inactive-border;
+
+        &.active {
+          color: $active-color;
+        }
+      }
+    }
+  }
+
+  tbody {
+    background-color: white;
+
+    tr {
+      &:hover {
+        background-color: $table-hover;
+      }
+    }
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid $table-bg;
+    text-align: left;
+  }
+
+  .actions-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      padding: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      color: $active-color;
+
+      svg {
+        &.delete {
+          color: $delete-color;
+        }
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid $search-bar-bg;
+  background-color: $search-bar-bg;
+  color: black;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: $font-size;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
+    background-color: transparent;
+    border: 1px solid $inactive-border;
+    color: $inactive-border;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: $font-size;
+    border-radius: 3px;
+
+    &:hover,
+    &:disabled {
+      background-color: $active-color;
+      color: white;
+    }
+  }
+}

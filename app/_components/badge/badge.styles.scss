@@ -1,0 +1,31 @@
+@import "@scss/variables";
+$badgeSize: 3rem;
+.badge {
+  height: $badgeSize;
+  width: $badgeSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  &-success {
+    background: $success-transparent;
+  }
+  &-alert {
+    background: $alert-transparent;
+  }
+  &-warning {
+    background: $warning-transparent;
+  }
+  &-info {
+    background: $info-transparent;
+  }
+  &-primary {
+    background: $primary-transparent;
+  }
+  &-secondary {
+    background: $secondary-transparent;
+  }
+  &-transparent {
+    background: none;
+  }
+}

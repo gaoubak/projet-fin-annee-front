@@ -1,0 +1,140 @@
+@import "@scss/variables.scss";
+
+.button {
+  border: none;
+  border-radius: 8px;
+  height: 52px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  &.type-primary,
+  &.type-secondary,
+  &.type-alert,
+  &.type-success,
+  &.type-warning {
+    color: #fff;
+    &:hover {
+      color: inherit;
+    }
+
+    &.transparent {
+      color: inherit;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &.type-primary {
+    background: $primary;
+    &:hover {
+      background-color: $primary-transparent;
+    }
+    &.transparent {
+      background: $primary-transparent;
+      color: $primary;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &.type-secondary {
+    background: $secondary;
+    &:hover {
+      background-color: $secondary-transparent;
+    }
+    &.transparent {
+      background: $secondary-transparent;
+      color: $secondary;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+
+  &.type-alert {
+    background: $alert;
+    &:hover {
+      background-color: $alert-transparent;
+    }
+    &.transparent {
+      background: $alert-transparent;
+      color: $alert;
+      &:hover {
+        background-color: $alert;
+      }
+    }
+  }
+
+  &.type-success {
+    background: $success;
+    &:hover {
+      background-color: $success-transparent;
+    }
+    &.transparent {
+      background: $success-transparent;
+      color: $success;
+      &:hover {
+        background-color: $success;
+      }
+    }
+  }
+
+  &.type-warning {
+    background: $warning;
+    &:hover {
+      background-color: $warning-transparent;
+    }
+    &.transparent {
+      background: $warning-transparent;
+      color: $warning;
+      &:hover {
+        background-color: $warning;
+      }
+    }
+  }
+
+  &.type-info {
+    background: $info;
+    &:hover {
+      background-color: $info-transparent;
+    }
+    &.transparent {
+      background: $info-transparent;
+      color: $info;
+      &:hover {
+        background-color: $info;
+      }
+    }
+  }
+
+  &.with-icon {
+    display: flex;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    & > img {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    & > :first-child {
+      margin-right: 0.25rem;
+    }
+
+    & > :last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

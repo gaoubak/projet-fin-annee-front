@@ -1,0 +1,45 @@
+@import "@scss/variables.scss";
+.user-card {
+  display: flex;
+  padding: 2rem 2rem 1rem 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  background: $grey;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  & > .user-card__profile-picture {
+    $size: 84px;
+    height: $size;
+    width: $size;
+    outline: $secondary solid 2px;
+    outline-offset: 2px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  & > :not(.user-card__profile-picture) {
+    margin-top: 0.25rem;
+  }
+  & > .user-card__name {
+    margin-top: auto;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  & > .user-card__email {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  & > .user-card__role {
+    font-size: 0.75rem;
+    opacity: 0.5;
+  }
+  & > .user-card__action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
