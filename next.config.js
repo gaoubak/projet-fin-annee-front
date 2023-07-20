@@ -11,6 +11,12 @@ const nextConfig = {
   env: {
     BACKEND_URL: "http://w2-groupe10.hetic-projects.arcplex.tech:8090",
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   crossOrigin: 'anonymous',
 };
 

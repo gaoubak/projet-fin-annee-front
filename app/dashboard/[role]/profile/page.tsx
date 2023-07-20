@@ -5,15 +5,10 @@ import { useState } from 'react';
 import { HiMiniArrowUturnLeft, HiPencilSquare } from 'react-icons/hi2';
 
 import './profilePage.styles.scss';
-
-export const isUserLoggedIn = () => {
-	return JSON.parse(localStorage.getItem('user') || '{}');
-};
+import { getCurrentUser } from '@utils/users';
 
 export default function ProfilePage() {
-	console.log('là', isUserLoggedIn());
-
-	const userProfilInfos = isUserLoggedIn();
+	const data = getCurrentUser();
 
 	const [modificateProfil, setModificateProfil] = useState(false);
 
@@ -51,16 +46,16 @@ export default function ProfilePage() {
 					className="user-chip__profile-picture"
 				/>
 				<p className="profilePage_name">
-					{userProfilInfos.user.attributes.name}
+					{data.user.attributes.name}
 					{' - '}
-					{userProfilInfos.user.attributes.role}
+					{data.user.attributes.role}
 				</p>
 				<p className="profilePage_email">
-					{userProfilInfos.user.attributes.email}
+					{data.user.attributes.email}
 				</p>
 				<p className="profilePage_id">
 					{'Identifiant : '}
-					{userProfilInfos.user.id}
+					{data.user.id}
 				</p>
 			</div>
 			<div className="contentProfile">
